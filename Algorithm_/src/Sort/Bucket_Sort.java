@@ -3,6 +3,10 @@ package Sort;
 import java.util.ArrayList;
 import java.util.Collections;
 
+//버킷정렬 무슨 소린지 이해가 안되서 참조
+//https://fixsy.org/ko/%EB%B2%84%ED%82%B7-%EC%A0%95%EB%A0%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98#Python_Java_%EB%B0%8F_CC%EC%9D%98_%EB%B2%84%ED%82%B7_%EC%A0%95%EB%A0%AC_%EC%BD%94%EB%93%9C
+
+
 public class Bucket_Sort {
 	
 	static void bucket_sort(double[] arr) {
