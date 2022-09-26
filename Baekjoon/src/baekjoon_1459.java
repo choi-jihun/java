@@ -4,6 +4,9 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 //https://buzz-program.tistory.com/entry/BOJ1459%EA%B1%B7%EA%B8%B0 
+/* 첨엔 단순하게 생각해서 2*w와 s만 비교를 해서 
+path1과 path2 방식만 계산해서 주구장창 돌렸다... 
+그러다 답이 틀리다는걸 깨닫고 인터넷을 서칭하면서 위 주소에서 path3 방식이 더 빠를 수도 있다는걸 깨달았다..*/
 
 public class baekjoon_1459 {
 
