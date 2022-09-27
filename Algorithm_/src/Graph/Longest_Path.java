@@ -8,6 +8,9 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
+//https://www.geeksforgeeks.org/find-longest-path-directed-acyclic-graph/?ref=lbp 
+//위 주소에서 최장거리 그래프 참조
+
 public class Longest_Path {
 	static class Node{
 		int idx;
@@ -92,5 +95,3 @@ public class Longest_Path {
 		input.close();
 	}
 }
-
-
