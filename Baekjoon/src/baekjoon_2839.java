@@ -22,5 +22,4 @@ public class baekjoon_2839 {
 				
 		}
 	}
-
 }
