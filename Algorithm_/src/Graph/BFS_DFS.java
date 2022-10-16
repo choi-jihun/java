@@ -62,7 +62,7 @@ public class BFS_DFS {
 		int start = sc.nextInt();
 		visited = new boolean[V+1];
 		bfs(start);
-		//dfs(start);
+		dfs(start);
 		sc.close();
 	}
 
