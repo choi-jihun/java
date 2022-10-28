@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 //a,b,c를 배열에 넣고 정렬하는게 전부인 문제였다...
 
 class Solution {
