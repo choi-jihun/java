@@ -47,7 +47,6 @@ public class baekjoon_1652 {
             }
         }
 
-        // 결과 출력
         System.out.println(horizontalCount + " " + verticalCount);
     }
 }
