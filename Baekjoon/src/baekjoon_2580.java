@@ -16,7 +16,7 @@ public class baekjoon_2580 {
                 arr[i][j] = Integer.parseInt(st.nextToken());
             }
         }
-
+        
         backTracking(0, 0);
     }
 
