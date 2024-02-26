@@ -40,14 +40,20 @@ public class baekjoon_14438 {
         bw.flush();
     }
 
+    //트리 초기화
     static int init(int start, int end, int node) {
         if (start == end) {
             return tree[node] = arr[start];
         }
         int mid = (start + end) / 2;
-        return tree[node] = Math.min(init(start, mid, node * 2), init(mid + 1, end, node * 2 + 1));
+        int left = init(start, mid, node * 2);
+        int right = init(mid + 1, end, node * 2 + 1);
+        return tree[node] = Math.min(left, right);
     }
 
+
+    //값 업데이트
+    //현재 노드는 자식 노드의 최솟값으로
     static int update(int start, int end, int node, int idx, int val) {
         if (idx < start || idx > end)
             return tree[node];
@@ -57,9 +63,13 @@ public class baekjoon_14438 {
         }
 
         int mid = (start + end) / 2;
-        return tree[node] = Math.min(update(start, mid, node * 2, idx, val), update(mid + 1, end, node * 2 + 1, idx, val));
+        int left = update(start, mid, node * 2, idx, val);
+        int right = update(mid + 1, end, node * 2 + 1, idx, val);
+        return tree[node] = Math.min(left, right);
     }
 
+    //i와 j사이에 최소값을 찾는 과정
+    //구간 밖이면 Integer.MAX_VALUE 반환
     static int query(int start, int end, int node, int i, int j) {
         if (j < start || i > end)
             return Integer.MAX_VALUE;
