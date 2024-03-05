@@ -19,7 +19,8 @@ public class baekjoon_9613 {
                 arr[i] = Integer.parseInt(st.nextToken());
             }
 
-            int sum = 0;
+            long sum = 0;
+
             for (int i = 0; i < N - 1; i++) {
                 for (int j = i + 1; j < N; j++) {
                     sum += gcd(arr[i], arr[j]);
