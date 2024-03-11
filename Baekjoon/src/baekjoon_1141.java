@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class baekjoon_1141{
@@ -18,9 +19,9 @@ public class baekjoon_1141{
         for (int i = 0; i < N; i++) {
             str[i] = br.readLine();
         }
-        Arrays.sort(str, (String s1, String s2) -> s1.length() - s2.length());
+        Arrays.sort(str, Comparator.comparingInt(String::length));
 
-        List<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList<>();
         for (int i = 0; i < N; i++) {
             boolean isPrefix = false;
             for (int j = i + 1; j < N; j++) {
