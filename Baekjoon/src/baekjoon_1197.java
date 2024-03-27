@@ -29,7 +29,7 @@ public class baekjoon_1197 {
         V = Integer.parseInt(st.nextToken());
         E = Integer.parseInt(st.nextToken());
         for (int i = 0; i < V + 1; i++) {
-            graph.add(new ArrayList<Main.Node>());
+            graph.add(new ArrayList<>());
         }
 
         for (int i = 0; i < E; i++) {
