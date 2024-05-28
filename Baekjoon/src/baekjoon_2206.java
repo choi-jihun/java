@@ -3,6 +3,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
+//bfs 사용하여 벽을 부순 것과 안 부순 것 나누기 위해 visit을 3차원 배렬로 선언
+//시간복잡도는 1000*1000
+//메모리 150832, 시간 820
 public class baekjoon_2206 {
 
     static class Node {
