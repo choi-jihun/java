@@ -20,6 +20,7 @@ public class baekjoon_2174 {
     static final int[] dx = {0, 1, 0, -1};
     static final int[] dy = {1, 0, -1, 0};
     static final Map<Character, Integer> directionMap = new HashMap<>();
+
     static {
         directionMap.put('N', 0);
         directionMap.put('E', 1);
@@ -78,28 +79,31 @@ public class baekjoon_2174 {
         int dirIndex = directionMap.get(robot.direction);
 
         switch (command) {
-            case 'L':
+            case 'L': // 왼쪽으로 회전
                 dirIndex = (dirIndex + 3) % 4;
                 robot.direction = getDirection(dirIndex);
                 break;
-            case 'R':
+            case 'R': // 오른쪽으로 회전
                 dirIndex = (dirIndex + 1) % 4;
                 robot.direction = getDirection(dirIndex);
                 break;
-            case 'F':
+            case 'F': // 전진
                 int nx = robot.x + dx[dirIndex];
                 int ny = robot.y + dy[dirIndex];
 
+                // 벽에 부딪히는 경우
                 if (nx < 1 || nx > A || ny < 1 || ny > B) {
                     bw.write("Robot " + robotNum + " crashes into the wall\n");
                     return true;
                 }
 
+                // 다른 로봇과 부딪히는 경우
                 if (arr[nx][ny] != 0) {
                     bw.write("Robot " + robotNum + " crashes into robot " + arr[nx][ny] + "\n");
                     return true;
                 }
 
+                // 로봇 좌표 업데이트
                 arr[robot.x][robot.y] = 0;
                 arr[nx][ny] = robotNum;
                 robot.x = nx;
