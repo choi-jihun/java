@@ -1,6 +1,8 @@
 import java.io.*;
 import java.util.*;
 
+// 16308kb 156ms
+// 그래프 활용 문제, 방향 찾기가 중요
 public class baekjoon_2174 {
 
     static class Robot {
